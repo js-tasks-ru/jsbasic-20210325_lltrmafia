@@ -15,13 +15,17 @@
   </div>
 
   <script type="module">
+    let config = {
+      steps: 5,
+      value: 0,
+    }
+
     import StepSlider from './index.js';
 
-    let stepSlider = new StepSlider({
-      steps: 5
-    });
+    let stepSlider = new StepSlider(config);
 
-    holder.append(stepSlider.elem);
+    holder.append(stepSlider.render());
+    console.log(stepSlider.elem);
 
     holder.addEventListener('slider-change', (event) => console.log(event));
   </script>

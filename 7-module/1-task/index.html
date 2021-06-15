@@ -22,8 +22,12 @@
 
     let container = document.querySelector('.container');
 
-    container.append(ribbon.elem);
+    container.append(ribbon.render());
+    ribbon.ribbonCarouselStart();
+    ribbon.elem.addEventListener('ribbon-select', ev =>{
+      console.log(ev.detail);
+    });
+    console.log(ribbon.elem);
   </script>
 </body>
-
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -83,6 +82,7 @@
 
     let cartIcon = new CartIcon();
     let cartIconHolder = document.querySelector('[data-cart-icon-holder]');
+    //cartIconHolder.append(cartIcon.render());
     cartIconHolder.append(cartIcon.elem);
 
     let addProductButton = document.querySelector('[data-add-product]');

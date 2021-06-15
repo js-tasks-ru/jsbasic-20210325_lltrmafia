@@ -20,8 +20,12 @@
 
     let carousel = new Carousel(slides);
     let containerElement = document.body.querySelector('.container');
-
-    containerElement.append(carousel.elem);
+    containerElement.append(carousel.render());
+    carousel.carouselStart();
+    carousel.elem.addEventListener('product-add', ev =>{
+      console.log(ev.detail);
+    });
+    console.log(carousel.elem);
   </script>
 </body>
 
